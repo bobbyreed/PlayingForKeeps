@@ -1195,7 +1195,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 33c680bb38f9e974ca3409a62cf51a3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1320224507}
   m_SourcePrefab: {fileID: 100100000, guid: 33c680bb38f9e974ca3409a62cf51a3e, type: 3}
 --- !u!1 &312677823
 GameObject:
@@ -1461,10 +1464,46 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1948693200}
+    - target: {fileID: 5030734266366949665, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5030734266366949668, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1948693200}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1320224507}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetCoins
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LukesRoom, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030734266792631118, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5030734267259534324, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
       propertyPath: m_Name
       value: Hand Menu With Button Activation
@@ -2433,6 +2472,11 @@ Transform:
   - {fileID: 1982313859}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1132167233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5224082592761087193, guid: 33c680bb38f9e974ca3409a62cf51a3e, type: 3}
+  m_PrefabInstance: {fileID: 291507089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1185838611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,6 +3016,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Renderer: {fileID: 1982313861}
   m_MaterialIndex: 0
+--- !u!1 &1320224505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33c680bb38f9e974ca3409a62cf51a3e, type: 3}
+  m_PrefabInstance: {fileID: 291507089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1320224507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320224505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2255467c8e61bc40bd0624cd8b828af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal: {fileID: 0}
+  goalObject: {fileID: 1132167233}
+  Coins:
+  - {fileID: 645588969502739141}
+  - {fileID: 31060234}
+  - {fileID: 100927790}
+  - {fileID: 910235094}
+  - {fileID: 987860868}
+  - {fileID: 923881348}
+  CoinStarts: []
 --- !u!4 &1337110718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7990873191187716717, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
