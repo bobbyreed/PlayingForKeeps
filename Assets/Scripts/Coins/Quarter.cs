@@ -30,14 +30,14 @@ public class Quarter : Coin
       {
         if(!isSmall)
         {
-            Shrink();
+            //Shrink();
         }
       }
       else
       {
         if(!isBig)
         {
-            Grow();
+            //Grow();
         }
       }
       gameObject.transform.localScale = scale.localScale;

@@ -13,11 +13,27 @@ public class LukesRoom : Level
        goal = goalObject.GetComponent<Collider>();
        //create array of transforms the same size as number of coins
        CoinStarts = new Transform[Coins.Length];
+       CoinsRBs = new Rigidbody[Coins.Length];
        //assign start transforms to CoinStarts
        for (int i = 0; i < Coins.Length; i++)
        {
             CoinStarts[i] = Coins[i].transform;
             CoinsRBs[i] = Coins[i].GetComponent<Rigidbody>();
+            //Debug.Log("Coin " + i + " Rigidbody is " + CoinsRBs[i]);            
+       }
+       ActivateCoin(Coins[0]);
+    }
+    
+    // Update is called once per frame
+    void Update()
+    {
+        //Check if any quarters have made it in the goal
+        for (int i = 0; i < Coins.Length; i++)
+        {
+            if(goal.bounds.Contains(Coins[i].transform.position))
+            {
+                Victory();
+            }
             if(CoinsRBs[i].velocity.x > 0)
             {
                 ActivateCoin(Coins[i]);
@@ -26,20 +42,6 @@ public class LukesRoom : Level
             {
                 //Calculate Distance to goal
                     //print distance to goal
-            }
-       }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Check if any quarters have made it in the goal
-        for (int i = 0; i < Coins.Length; i++)
-        {
-            if(Coins[i].)
-            if(goal.bounds.Contains(Coins[i].transform.position))
-            {
-                Victory();
             }
         }
 
@@ -73,8 +75,8 @@ public class LukesRoom : Level
     public void ResetLevel()
     {
         //set coins to their starting positions
-        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings);
-        Debug.Log("Coin Reset Called");
+        SceneManager.LoadScene(0);
+        Debug.Log("Level Reset Called");
     }
 
 
