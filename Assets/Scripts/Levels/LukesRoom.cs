@@ -32,6 +32,7 @@ public class LukesRoom : Level
         {
             if(goal.bounds.Contains(Coins[i].transform.position))
             {
+                Debug.Log("Coin " + i + "has hit the target");
                 Victory();
             }
             if(CoinsRBs[i].velocity.x > 0)
@@ -58,7 +59,7 @@ public class LukesRoom : Level
         //add highlight to new activeCoin
     }
 
-    public void Victory()
+    /* public void Victory()
     {
         Debug.Log("Victory!");
     }
@@ -78,6 +79,6 @@ public class LukesRoom : Level
         SceneManager.LoadScene(0);
         Debug.Log("Level Reset Called");
     }
-
+ */
 
 }
