@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Level : MonoBehaviour
 {
+    public TextMeshPro statusText;
     public Collider goal;
     public GameObject goalObject;
     public GameObject[] Coins;
@@ -64,6 +66,7 @@ public class Level : MonoBehaviour
     public void Victory()
     {
         Debug.Log("Victory!");
+        statusText.text = "Victory!";
     }
 
     public void ResetCoins()
